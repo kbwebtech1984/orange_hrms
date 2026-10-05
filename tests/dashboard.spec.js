@@ -7,7 +7,7 @@ require('../hooks/hooks.js');
 const dashboard = require('../pages/dashboard.js');
 
 
-test('Validate Dashboard heading', async ({loginpage,dashboardpage}) => {
+test('TC007 Validate Dashboard heading', async ({loginpage,dashboardpage}) => {
         
         const logindata = jsonreader.loginm();
         await loginpage.validateLoginText();
