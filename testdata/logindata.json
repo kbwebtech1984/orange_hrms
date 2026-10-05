@@ -1,0 +1,49 @@
+{
+    "validUser" : {
+        "username" :  "Admin",
+        "password" :  "admin123"
+    },
+
+    "inValidUser" : {
+        "username" :  "Admin1",
+        "password" :  "123456"
+    },
+
+    "empty_user_name_pwd" : {
+        "username" :  "",
+        "password" :  ""
+    },
+
+    "valid_username_invalid_pwd" : {
+        "username" :  "Admin",
+        "password" :  "12345678"
+    },
+    "invalid_username_valid_pwd" : {
+        "username" :  "Admin12",
+        "password" :  "admin123"
+    },
+    "USernotRegistered":
+
+           {
+               "username": "Admins",
+               "password": "Admin12345"
+
+           },
+
+    "SqlinjectionUsername":
+    {
+            "username": "' OR '1'='1",
+            "password": "Admin123"
+
+    },
+     "SqlinjectionPassword":
+           
+              {
+                    "username": "Admin",
+                    "password": "' OR '1'='1"
+
+               }
+
+    }
+
+
