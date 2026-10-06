@@ -49,9 +49,31 @@ pipeline {
                 bat 'call npx playwright test dashboard.spec.js --headed --project=chromium'
 
             }
+            
 
         }
+        stage('Generate Allure Report') {
+            steps {
+                bat 'allure generate allure-results --clean -o allure-report'
+            }
+        }
 
+        stage('Publish Allure Report') {
+            steps {
+                allure([
+                    includeProperties: false,
+                    jdk: '',
+                    results: [[path: 'allure-results']]
+                ])
+            }
+        }
     }
 
+    post {
+        always {
+            archiveArtifacts artifacts: 'allure-results/**', allowEmptyArchive: true
+        }
+    }
 }
+
+
