@@ -27,7 +27,7 @@ pipeline {
         stage('Run Playwright Tests') {
             steps {
                 bat 'if exist allure-results rmdir /s /q allure-results'
-                bat 'call npx playwright test login.spec.js dashboard.spec.js --headed --project=chromium'
+                bat 'call npx playwright test login.spec.js dashboard.spec.js pim.spec.js --headed --project=chromium'
             }
         }
     }
