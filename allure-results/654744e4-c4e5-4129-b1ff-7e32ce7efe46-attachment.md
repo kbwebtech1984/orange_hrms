@@ -1,0 +1,49 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: pim.spec.js >> TC0010 pim add employee
+- Location: tests\pim.spec.js:12:1
+
+# Error details
+
+```
+TypeError: page.get_by_text is not a function
+```
+
+# Test source
+
+```ts
+  1  | const {expect} =  require ('@playwright/test');
+  2  | //const logindata = require('../testdata/logindata.json');
+  3  | const commonmethod = require('../util/commonmethod');
+  4  | 
+  5  | class pim
+  6  | {
+  7  | 
+  8  |     constructor(page)
+  9  |     {
+  10 |         this.page = page;
+  11 |         this.addemp= page.getByRole('link',{name:'Add Employee'});
+> 12 |         this.headingemp=page.get_by_text("Add Employee",{ exact:true});
+     |                              ^ TypeError: page.get_by_text is not a function
+  13 | 
+  14 | 
+  15 |     }
+  16 |     async clickonaddemp()
+  17 |     {
+  18 |       
+  19 |         await commonmethod.click(this.addemp);
+  20 |         
+  21 |         await expect(this.headingemp).toBeVisible();
+  22 |        await this.page.waitForTimeout(2000);
+  23 |        
+  24 |          
+  25 |     }}
+  26 | 
+  27 |     module.exports = pim;
+```

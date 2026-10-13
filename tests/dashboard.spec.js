@@ -16,5 +16,6 @@ test('TC007 Validate Dashboard heading', async ({loginpage,dashboardpage}) => {
         logindata.validUser.password);
         
         await dashboardpage.validdashboardmenu();
-
+        await dashboardpage.pimverify();
+        
 });

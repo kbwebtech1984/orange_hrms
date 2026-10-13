@@ -1,0 +1,3 @@
+start to login in orangehrms
+screen shot captured :TC0010 pim add employee
+complete all test cases

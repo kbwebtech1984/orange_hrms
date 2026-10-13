@@ -1,0 +1,3 @@
+start to login in orangehrms
+screen shot captured :TC0010 verify pim
+complete all test cases

@@ -1,0 +1,3 @@
+start to login in orangehrms
+screen shot captured :TC007 Validate Dashboard heading
+complete all test cases
